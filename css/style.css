@@ -40,8 +40,8 @@ header {
 	cursor: pointer;
 }
 
-nav {
-
+nav a{
+	text-decoration: none;
 }
 
 nav ul li {
