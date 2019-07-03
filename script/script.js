@@ -29,6 +29,20 @@ function generateComp() {
 	}, 40)
 }
 
+const liveTime = document.getElementById('time');
+let hour = 0, min = 0, sec = 0;
+setInterval(function(){
+	if(sec == 59) {
+		sec = 0;
+		min++;
+	} if(min == 59) {
+		min = 0;
+		hour++;
+	}
+	sec += 1;
+	liveTime.innerHTML = hour + ' H : ' + min + ' M : ' + sec + ' S';
+}, 1000)
+
 const container = document.querySelector('.container');
 const liveScore = document.getElementById('liveScore');
 const info = container.querySelector('.info');

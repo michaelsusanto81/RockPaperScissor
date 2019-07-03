@@ -5,16 +5,34 @@
 	background-color: #435166;
 }
 
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
 body {
 	text-align: center;
+	animation: fadeIn 1s;
 }
 
 header {
 	margin: 10px auto;
 }
 
+header h1, #playtime, #score {
+	font-family: 'Chewy', cursive;
+}
+
+header h3, #time, #liveScore, nav {
+	font-family: 'Happy Monkey', cursive;
+}
+
 .container {
-	margin: 50px auto;
+	margin: 40px auto;
+}
+
+.container .liveTime {
+	margin-bottom: 30px;
 }
 
 .container img {
@@ -40,10 +58,15 @@ header {
 	cursor: pointer;
 }
 
-nav a{
+nav a {
 	text-decoration: none;
+}
+
+nav h4 {
+	margin-top: -10px;
 }
 
 nav ul li {
 	display: inline-block;
+	margin: 10px 10px;
 }
