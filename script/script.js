@@ -23,7 +23,7 @@ function generateComp() {
 	let i = 0;
 	const start = new Date().getTime();
 	setInterval(function() {
-		if((new Date().getTime() - start) >= 1000) {
+		if(new Date().getTime() - start > 1000) {
 			clearInterval;
 			return;
 		}
@@ -60,7 +60,7 @@ container.addEventListener('click', function(e) {
 
 	// if clicked element has className of player
 	if(e.target.className == 'player') {
-		const p = e.target.src.split(/[/.]/)[8];
+		const p = e.target.src.split(/[/.]/)[7];
 		const c = compChoice();
 		generateComp();
 
@@ -72,7 +72,6 @@ container.addEventListener('click', function(e) {
 
 			comp.src = 'img/' + c + '.png';
 			liveScore.innerHTML = playerScore + ' : ' + compScore;
-			console.log(p, c, info.innerHTML);
 		}, 1000);		
 	} 
 
