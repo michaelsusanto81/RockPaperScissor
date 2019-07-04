@@ -23,7 +23,7 @@ function generateComp() {
 	let i = 0;
 	const start = new Date().getTime();
 	setInterval(function() {
-		if(new Date().getTime() - start > 1000) {
+		if((new Date().getTime() - start) >= 1000) {
 			clearInterval;
 			return;
 		}
