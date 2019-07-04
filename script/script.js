@@ -60,7 +60,7 @@ container.addEventListener('click', function(e) {
 
 	// if clicked element has className of player
 	if(e.target.className == 'player') {
-		const p = e.target.src.split(/[/.]/)[7];
+		const p = e.target.getAttribute('src').split(/[/.]/)[1];
 		const c = compChoice();
 		generateComp();
 
