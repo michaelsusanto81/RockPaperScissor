@@ -72,6 +72,7 @@ container.addEventListener('click', function(e) {
 
 			comp.src = 'img/' + c + '.png';
 			liveScore.innerHTML = playerScore + ' : ' + compScore;
+			console.log(p, c, info.innerHTML);
 		}, 1000);		
 	} 
 
